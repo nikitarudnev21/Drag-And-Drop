@@ -97,18 +97,19 @@ namespace RudnevDrag
             pictureBox34.Image = f4;
             f5 = Image.FromFile("C:/Users/opilane/source/repos/RudnevDrag/Resources/image_part_035.jpg");
             pictureBox35.Image = f5;
-            f6 = Image.FromFile("C:/Users/opilane/source/repos/RudnevDrag/Resources/image_part_036.jpg");
+            f6 = Bitmap.FromFile("C:/Users/opilane/source/repos/RudnevDrag/Resources/image_part_036.jpg");
             pictureBox36.Image = f6;
+
         }
 
         private void Panel1_MouseDown(object sender, MouseEventArgs e)
         {
-            boola1 = true;
+      /*      boola1 = true;
             boola2 = false;
             boola3 = false;
             lx = e.X;
             ly = e.Y;
-           // LastClicked = 0;
+           // LastClicked = 0;*/
         }
         private void PictureBox13_Click(object sender, EventArgs e)
         {
@@ -127,8 +128,10 @@ namespace RudnevDrag
             LastClicked = 1;
             lx = e.X;
             ly = e.Y;
-            a1X = e.X - pictureBox1.Location.X;
-            a1Y = e.Y - pictureBox1.Location.Y;
+            /*    a1X = e.X - pictureBox1.Location.X;
+                a1Y = e.Y - pictureBox1.Location.Y;*/
+            pictureBox1.Image = null;
+
         }
 
         private void PictureBox2_MouseDown(object sender, MouseEventArgs e)
@@ -137,8 +140,8 @@ namespace RudnevDrag
             LastClicked = 2;
             lx = e.X;
             ly = e.Y;
-            a2X = e.X - pictureBox2.Location.X;
-            a2Y = e.Y - pictureBox2.Location.Y;
+            pictureBox2.Image = null;
+
         }
         private void PictureBox3_MouseDown(object sender, MouseEventArgs e)
         {
@@ -146,8 +149,8 @@ namespace RudnevDrag
             LastClicked = 3;
             lx = e.X;
             ly = e.Y;
-            a3X = e.X - pictureBox3.Location.X;
-            a3Y = e.Y - pictureBox3.Location.Y;
+            pictureBox3.Image = null;
+
         }
         private void PictureBox4_MouseDown(object sender, MouseEventArgs e)
         {
@@ -155,26 +158,26 @@ namespace RudnevDrag
             LastClicked = 4;
             lx = e.X;
             ly = e.Y;
-            a4X = e.X - pictureBox4.Location.X;
-            a4Y = e.Y - pictureBox4.Location.Y;
+            pictureBox4.Image = null;
+
         }
         private void PictureBox5_MouseDown(object sender, MouseEventArgs e)
         {
             test.Text = "pb5 mdwn";
             LastClicked = 5;
-            lx = e.X;
-            ly = e.Y;
-            a5X = e.X - pictureBox5.Location.X;
-            a5Y = e.Y - pictureBox5.Location.Y;
+            a5X = e.X;
+            a5Y = e.Y;
+            pictureBox5.Image = null;
+
+
         }
         private void PictureBox6_MouseDown(object sender, MouseEventArgs e)
         {
             test.Text = "pb6 mdwn";
             LastClicked = 6;
-            lx = e.X;
-            ly = e.Y;
-            a6X = e.X - pictureBox6.Location.X;
-            a6Y = e.Y - pictureBox6.Location.Y;
+            a6X = e.X;
+            a6Y = e.Y;
+            pictureBox6.Image = null;
 
         }
 
@@ -184,8 +187,7 @@ namespace RudnevDrag
             LastClicked = 7;
             lx = e.X;
             ly = e.Y;
-            b1X = e.X - pictureBox7.Location.X;
-            b1Y = e.Y - pictureBox7.Location.Y;
+            pictureBox7.Image = null;
         }
         private void PictureBox8_MouseDown(object sender, MouseEventArgs e)
         {
@@ -193,8 +195,8 @@ namespace RudnevDrag
             LastClicked = 8;
             lx = e.X;
             ly = e.Y;
-            b2X = e.X - pictureBox8.Location.X;
-            b2Y = e.Y - pictureBox8.Location.Y;
+            pictureBox8.Image = null;
+
         }
         private void PictureBox9_MouseDown(object sender, MouseEventArgs e)
         {
@@ -202,8 +204,8 @@ namespace RudnevDrag
             LastClicked = 9;
             lx = e.X;
             ly = e.Y;
-            b3X = e.X - pictureBox9.Location.X;
-            b3Y = e.Y - pictureBox9.Location.Y;
+            pictureBox9.Image = null;
+
         }
         private void PictureBox10_MouseDown(object sender, MouseEventArgs e)
         {
@@ -211,8 +213,8 @@ namespace RudnevDrag
             LastClicked = 10;
             lx = e.X;
             ly = e.Y;
-            b4X = e.X - pictureBox10.Location.X;
-            b4Y = e.Y - pictureBox10.Location.Y;
+            pictureBox10.Image = null;
+
         }
         private void PictureBox11_MouseDown(object sender, MouseEventArgs e)
         {
@@ -220,9 +222,7 @@ namespace RudnevDrag
             LastClicked = 11;
             lx = e.X;
             ly = e.Y;
-            b5X = e.X - pictureBox11.Location.X;
-            b5Y = e.Y - pictureBox11.Location.Y;
-
+            pictureBox11.Image = null;
         }
         private void PictureBox12_MouseDown(object sender, MouseEventArgs e)
         {
@@ -230,161 +230,85 @@ namespace RudnevDrag
             LastClicked = 12;
             lx = e.X;
             ly = e.Y;
-            b6X = e.X - pictureBox12.Location.X;
-            b6Y = e.Y - pictureBox12.Location.Y;
+            pictureBox12.Image = null;
+
         }
         private void Panel1_Paint(object sender, PaintEventArgs e)
         {
            if (LastClicked==1)
             {
-                e.Graphics.DrawImage(pictureBox1.Image, cx, cy);
+                e.Graphics.DrawImage(a1, cx, cy);
             }
            if(LastClicked==2)
             {
-                e.Graphics.DrawImage(pictureBox2.Image, cx, cy);
+                e.Graphics.DrawImage(a2, cx, cy);
             }
             if (LastClicked == 3)
             {
-                e.Graphics.DrawImage(pictureBox3.Image, cx, cy);
+                e.Graphics.DrawImage(a3, cx, cy);
             }
             if (LastClicked == 4)
             {
-                e.Graphics.DrawImage(pictureBox4.Image, cx, cy);
+                e.Graphics.DrawImage(a4, cx, cy);
             }
             if (LastClicked == 5)
             {
-                e.Graphics.DrawImage(pictureBox5.Image, cx, cy);
+                e.Graphics.DrawImage(a5, cx, cy);
             }
             if (LastClicked == 6)
             {
-                e.Graphics.DrawImage(pictureBox6.Image, cx, cy);
+                e.Graphics.DrawImage(a6, cx, cy);
             }
             if (LastClicked == 7)
             {
-                e.Graphics.DrawImage(pictureBox7.Image, cx, cy);
+               e.Graphics.DrawImage(b1, cx, cy);
             }
             if (LastClicked == 8)
             {
-                e.Graphics.DrawImage(pictureBox8.Image, cx, cy);
+                 e.Graphics.DrawImage(b2, cx, cy);
             }
             if (LastClicked == 9)
             {
-                e.Graphics.DrawImage(pictureBox9.Image, cx, cy);
+                e.Graphics.DrawImage(b3, cx, cy);
+
             }
             if (LastClicked == 10)
             {
-                e.Graphics.DrawImage(pictureBox10.Image, cx, cy);
+                e.Graphics.DrawImage(b4, cx, cy);
+
             }
             if (LastClicked == 11)
             {
-                e.Graphics.DrawImage(pictureBox11.Image, cx, cy);
+                if(pictureBox11.Image==b5)
+                {
+                    test2.Text = "dsa";
+                    e.Graphics.DrawImage(b5, cx, cy);
+                }
+                else
+                {
+                    test2.Text = "dsa2";
+                    e.Graphics.DrawImage(b6, cx, cy);
+                }
+
             }
             if (LastClicked == 12)
             {
-                e.Graphics.DrawImage(pictureBox12.Image, cx, cy);
+             //   e.Graphics.DrawImage(b6, cx, cy);
+
+                if (pictureBox12.Image == b6)
+                {
+                    test2.Text = "dsa3";
+                    e.Graphics.DrawImage(b6, cx, cy);
+                }
+                else
+                {
+                    test2.Text = "dsa4";
+                    e.Graphics.DrawImage(b5, cx, cy);
+                }
             }
         }
 
         private void Panel1_MouseMove(object sender, MouseEventArgs e)
-        {
-            test.Text = "mousemove";
-
-            if (LastClicked==1)
-            {
-                pictureBox1.Invalidate();
-                test.Text = "mousemove1";
-
-            }
-            if (LastClicked == 2)
-            {
-                pictureBox2.Invalidate();
-                test.Text = "mousemove2";
-
-            }
-            if (LastClicked == 3)
-            {
-                pictureBox3.Invalidate();
-                test.Text = "mousemove3";
-
-            }
-            if (LastClicked == 4)
-            {
-                pictureBox4.Invalidate();
-                test.Text = "mousemove4";
-
-            }
-            if (LastClicked == 5)
-            {
-                pictureBox5.Invalidate();
-                test.Text = "mousemove5";
-
-            }
-            if (LastClicked == 6)
-            {
-                pictureBox6.Invalidate();
-                test.Text = "mousemove6";
-            }
-            if (LastClicked == 7)
-            {
-                pictureBox7.Invalidate();
-                test.Text = "mousemove7";
-
-            }
-            if (LastClicked == 8)
-            {
-                pictureBox8.Invalidate();
-                test.Text = "mousemove8";
-
-            }
-            if (LastClicked == 9)
-            {
-                pictureBox9.Invalidate();
-                test.Text = "mousemove9";
-
-            }
-            if (LastClicked == 10)
-            {
-                pictureBox10.Invalidate();
-                test.Text = "mousemove10";
-
-            }
-            if (LastClicked == 11)
-            {
-                pictureBox11.Invalidate();
-                test.Text = "mousemove11";
-
-            }
-            if (LastClicked == 12)
-            {
-                pictureBox12.Invalidate();
-                test.Text = "mousemove12";
-            }
-
-
-            /* if(pictureBox1.Capture ||
-                pictureBox2.Capture ||
-                pictureBox3.Capture)
-            {
-                int dx = e.X - lx;
-                int dy = e.Y - ly;
-                cx += dx;
-                cy += dy;
-                lx = e.X;
-                ly = e.Y;
-                pictureBox1.Invalidate();
-                pictureBox2.Invalidate();
-                pictureBox3.Invalidate();
-            }*/
-        }
-
-        private void Panel1_MouseHover(object sender, EventArgs e)
-        {
-          if(this.Location== pictureBox5.Location)
-            {
-                test.Text = "loc";
-            }
-        }
-        private void Panel1_MouseUp(object sender, MouseEventArgs e)
         {
             test.Text = "czxczcx";
             boola1 = false;
@@ -455,12 +379,12 @@ namespace RudnevDrag
                 test.Text = "mv5";
                 if (pictureBox5.Capture)
                 {
-                    int dx = e.X - lx;
-                    int dy = e.Y - ly;
+                    int dx = e.X - a5X;
+                    int dy = e.Y - a5Y;
                     cx += dx;
                     cy += dy;
-                    lx = e.X;
-                    ly = e.Y;
+                    a5X = e.X;
+                    a5Y = e.Y;
                     test.Text = "mv55";
                     pictureBox5.Invalidate();
                 }
@@ -470,12 +394,12 @@ namespace RudnevDrag
                 test.Text = "mv6";
                 if (pictureBox6.Capture)
                 {
-                    int dx = e.X - lx;
-                    int dy = e.Y - ly;
+                    int dx = e.X - a6X;
+                    int dy = e.Y - a6Y;
                     cx += dx;
                     cy += dy;
-                    lx = e.X;
-                    ly = e.Y;
+                    a6X = e.X;
+                    a6Y = e.Y;
                     test.Text = "mv66";
                     pictureBox6.Invalidate();
                 }
@@ -492,7 +416,7 @@ namespace RudnevDrag
                     lx = e.X;
                     ly = e.Y;
                     test.Text = "mv77";
-                    if(e.Location.X==125 && e.Location.Y==125)
+                    if (e.Location.X == 125 && e.Location.Y == 125)
                     {
                         var p7x = pictureBox7.Location.X;
                         var p7y = pictureBox7.Location.Y;
@@ -555,7 +479,7 @@ namespace RudnevDrag
             if (LastClicked == 11)
             {
                 test.Text = "mv11";
-                if (pictureBox12.Capture)
+                if (pictureBox11.Capture)
                 {
                     int dx = e.X - lx;
                     int dy = e.Y - ly;
@@ -582,7 +506,162 @@ namespace RudnevDrag
                     pictureBox12.Invalidate();
                 }
             }
+        
+       
+    }
+
+        private void Panel1_MouseHover(object sender, EventArgs e)
+        {
         }
+        private void Panel1_MouseUp(object sender, MouseEventArgs e)
+        {
+            test.Text = "mousemove";
+
+            if (LastClicked == 1)
+            {
+                pictureBox1.Invalidate();
+                test.Text = "mousemove1";
+
+            }
+            if (LastClicked == 2)
+            {
+                pictureBox2.Invalidate();
+                test.Text = "mousemove2";
+
+            }
+            if (LastClicked == 3)
+            {
+                pictureBox3.Invalidate();
+                test.Text = "mousemove3";
+
+            }
+            if (LastClicked == 4)
+            {
+                pictureBox4.Invalidate();
+                test.Text = "mousemove4";
+
+            }
+            if (LastClicked == 5)
+            {
+                var ddX = e.X - pictureBox5.Location.X;
+                var ddY = e.Y - pictureBox5.Location.Y;
+                var pbx6 = pictureBox6.Location.X;
+                var pby6 = pictureBox6.Location.Y;
+                var pbx5 = pictureBox5.Location.X;
+                var pby5 = pictureBox5.Location.Y;
+
+                X = pictureBox5.Location.X;
+                Y = pictureBox5.Location.Y;
+
+                dX = ddX;
+                dY = ddY;
+                pbx6 = pbx5;
+                pby6 = pby5;
+                ddX = lx;
+                ddY = ly;
+                /*  pbx12 = lx;
+                  pby12 = ly;*/
+                pbx6 = X;
+                pby6 = Y;
+                a5X = dX;
+                a5Y = dY;
+                test.Text = "mousemove5";
+                test2.Text = "mousemove5";
+                pictureBox5.Invalidate();
+
+            }
+            if (LastClicked == 6)
+            {
+                pictureBox6.Invalidate();
+                test.Text = "mousemove6";
+            }
+            if (LastClicked == 7)
+            {
+                pictureBox7.Invalidate();
+                test.Text = "mousemove7";
+
+            }
+            if (LastClicked == 8)
+            {
+                pictureBox8.Invalidate();
+                test.Text = "mousemove8";
+
+            }
+            if (LastClicked == 9)
+            {
+                pictureBox9.Invalidate();
+                test.Text = "mousemove9";
+
+            }
+            if (LastClicked == 10)
+            {
+                pictureBox10.Invalidate();
+                test.Text = "mousemove10";
+
+            }
+            if (LastClicked == 11)
+            {
+                var ddX = e.X - pictureBox12.Location.X;
+                var ddY = e.Y - pictureBox12.Location.Y;
+                var pbx11 = pictureBox11.Location.X;
+                var pby11 = pictureBox11.Location.Y;
+                var pbx12 = pictureBox12.Location.X;
+                var pby12 = pictureBox12.Location.Y;
+
+           //     X = pictureBox11.Location.X;
+         //       Y = pictureBox11.Location.Y;
+
+                
+
+            /*    dX = ddX;
+                dY = ddY;*/
+                pbx11 = pbx12;
+                pby11 = pby12;
+                pictureBox11.Image = b6;
+                pictureBox12.Image = b5;
+
+
+         /*       ddX = lx;
+                ddY = ly;
+
+                pbx12 = X;
+                pby12 = Y;*/
+           /*     lx = dX;
+                ly = dY;*/
+                test.Text = "mousemove11";
+                pictureBox11.Invalidate();
+
+            }
+            if (LastClicked == 12)
+            {
+         /*       var ddX = e.X - pictureBox11.Location.X;
+                var ddY = e.Y - pictureBox11.Location.Y;
+                var pbx12 = pictureBox12.Location.X;
+                var pby12 = pictureBox12.Location.Y;
+                var pbx11 = pictureBox11.Location.X;
+                var pby11 = pictureBox11.Location.Y;
+
+                X = pictureBox12.Location.X;
+                Y = pictureBox12.Location.Y;
+
+                dX = ddX;
+                dY = ddY;
+
+                pbx12 = pbx11;
+                pby12 = pby11;
+                ddX = lx;
+                ddY = ly;
+                  pbx12 = lx;
+                  pby12 = ly;
+                pbx11 = X;
+                pby11 = Y;
+                lx = dX;
+                ly = dY;
+                test.Text = "mousemove11";
+                pictureBox12.Invalidate();*/
+            }
+        }
+
         private void PictureBox25_Click(object sender, EventArgs e)
         {
 
@@ -644,6 +723,14 @@ namespace RudnevDrag
         }
 
         private void PictureBox1_Click(object sender, EventArgs e)
+        {
+
+        }
+        private void Form1_Load(object sender, EventArgs e)
+        {
+
+        }
+        private void PictureBox23_Click(object sender, EventArgs e)
         {
 
         }
